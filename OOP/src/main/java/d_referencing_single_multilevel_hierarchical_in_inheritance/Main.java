@@ -19,7 +19,8 @@ public class Main {
         //  reference of type Rectangle and Rectangle class does not have 'side' member variable in it.
 
         /*
-        it's "TYPE OF REFERENCE" and "NOT TYPE OF OBJECT" that determines what member can be accessed.
+        it's "TYPE OF REFERENCE" and "NOT TYPE OF OBJECT" that determines what member can be accessed. -> for java variable not applicable for methods
+        - java variables are resolved at compile times
         */
 
         BigSquare bigSquare = new BigSquare();

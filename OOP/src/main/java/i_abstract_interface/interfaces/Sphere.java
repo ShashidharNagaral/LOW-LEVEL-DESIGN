@@ -1,0 +1,22 @@
+package i_abstract_interface.interfaces;
+
+import i_abstract_interface.interfaces.ext.Shape;
+import i_abstract_interface.interfaces.ext.SolidShape;
+
+public class Sphere implements SolidShape {
+    int r;
+
+    public Sphere(int r) {
+        this.r = r;
+    }
+
+    @Override
+    public double volume() {
+        return (4/3) * Shape.pi * Math.pow(this.r, 3);
+    }
+
+    @Override
+    public double area() {
+        return Shape.pi * Math.pow(this.r, 2);
+    }
+}

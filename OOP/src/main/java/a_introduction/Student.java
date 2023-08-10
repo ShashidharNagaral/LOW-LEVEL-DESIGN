@@ -11,7 +11,6 @@ public class Student {
         this.name = name;
         this.marks = marks;
     }
-
     // default constructor
     public Student() {
         new Student(0, "admin", 0.0f);
@@ -24,10 +23,10 @@ public class Student {
         this.marks = newObject.marks;
     }
 
-    @Override
-    public String toString() {
-        return this.name+" "+this.roll+" "+ this.marks;
-    }
+//    @Override
+//    public String toString() {
+//        return this.name+" "+this.roll+" "+ this.marks;
+//    }
 
     public String getDetail() {
         return "shashid";

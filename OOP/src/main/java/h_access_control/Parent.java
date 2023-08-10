@@ -6,7 +6,7 @@ public class Parent {
     /*
     package private:
     -> data accessible inside same package including subclass in same package
-    -> use default modifier when we don't want to let the data be used outside the package
+    -> use default modifier when we don't want to let the data be package used outside the
      */
 
     private int arr[];
@@ -37,7 +37,7 @@ public class Parent {
     }
     /*
     public modifier:
-    this is accessible everywhere (not subclass also)
+    this is accessible everywhere (not only subclass)
      */
 
 }

@@ -2,13 +2,15 @@ package b_static_example;
 
 public class Main {
     public static void main(String[] args) {
-        new Human(23, "shashidhar");
+        System.out.println(Human.population);
+
+        new Human(23, "Shashidhar");
         new Human(22,"Ashutosh");
         new Human(22,"Amey");
 
         // since population is associated with class, we are calling it through class name itself
         System.out.println(Human.population);
-        Human obj = new Human(10, "shubham");
+        Human obj = new Human(10, "Shubham");
         System.out.println(obj.population); // we are still allowed to call static methods or member by objects
         Main main = new Main();
         Main.sayHello(main);

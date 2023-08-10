@@ -1,5 +1,9 @@
 package h_access_control;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Child extends Parent {
 
     public Child(int num, String name) {
@@ -11,5 +15,4 @@ public class Child extends Parent {
         // child.arr; private member not accessible
         child.name = "newName"; // protected member
     }
-
 }

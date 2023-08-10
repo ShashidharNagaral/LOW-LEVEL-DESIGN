@@ -11,7 +11,7 @@ public class InnerClass {
         }
     }
 
-    // NOTE: OuterClas (InnerClass) cannot be static only nested class can be static (InnerB)
+    // NOTE: OuterClass (InnerClass) cannot be static, only nested class can be static (InnerB)
 
     static class InnerB {
         int value;
@@ -20,6 +20,7 @@ public class InnerClass {
             this.value = value;
 //            number = value; // not allowed since Inner B is static class and number is member of non-static class
         }
+
     }
 
     public InnerClass(int a) {
@@ -42,11 +43,15 @@ public class InnerClass {
         System.out.println(d.getDetail());
 
         
-        InnerA a = c.new InnerA(100, 91); // a is instance of InnerA Class which is property inside instance of class InnerClass (here c)
+        InnerA a = c.new InnerA(100, 91); // 'a' is instance of InnerA Class which is property inside instance of class InnerClass (here c)
         InnerA b = d.new InnerA(111, 93); // we are able to change the outer class property from inner class since Inner instance is created from InnerClass
 
         System.out.println(c.getDetail());
         System.out.println(d.getDetail());
+        System.out.println(a.value);
+        System.out.println(b.value);
     }
 
 }
+// NOTE: whatever we mention as static is actually independent of instance of the class inside which it has mentioned.
+// Ex. static class InnerB is independent of objects of class InnerClass, b ut also they have independent identity

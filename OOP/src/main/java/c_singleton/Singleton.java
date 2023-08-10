@@ -2,10 +2,9 @@ package c_singleton;
 
 /*
     What if you want to create only 1 instance of class?
-    1. i,e ir-respect any number of reference variable, number of instances will be 1.
+    1. i.e. irrespective of any number of reference variable, number of instances will be 1.
     2. We know we can create instance of any class only through Constructor.
-    3. i,e we should give the privilege of calling a constructor to the user, i,e we should make it private
-    4.
+    3. i.e. we should not give the privilege of calling a constructor to the user, i.e. we should make it private
  */
 
 public class Singleton {
@@ -15,10 +14,10 @@ public class Singleton {
     }
 
     // singleton object will hold the only instance of Singleton Class
-    // since all singleton is not a part of instance, we have to make it static
+    // singleton is holding the instance of class Singleton and its shared among all the reference variable of the class, it is made static
     private static Singleton singleton = null;
 
-    //NOTE: this below method is NOT THREAD SAFE, i,e multiple threads can call getInstance() method and this will create multiple instances
+    // NOTE: this below method is NOT THREAD SAFE, i,e multiple threads can call getInstance() method and this will create multiple instances
     public static Singleton getInstance() {
         // if singleton is null i,e till now there's no any instance
         if (singleton == null) {
@@ -44,15 +43,14 @@ public class Singleton {
     }
 }
 
-/*
-It has many applications like in multithreaded application, database connection etc.
- */
+// It has many applications like in multithreaded application, database connection etc.
+
 
 
 // implementing singleton using enum
 
 enum ESingleton {
-    INSTANCE;
+    INSTANCE; // this is a value in enum which is static instance of ESingleton class
     int value;
 
     public int getValue() {
