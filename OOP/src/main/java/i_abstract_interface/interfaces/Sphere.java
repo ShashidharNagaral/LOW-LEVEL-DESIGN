@@ -12,11 +12,11 @@ public class Sphere implements SolidShape {
 
     @Override
     public double volume() {
-        return (4/3) * Shape.pi * Math.pow(this.r, 3);
+        return (4/3) * Shape.PI * Math.pow(this.r, 3);
     }
 
     @Override
     public double area() {
-        return Shape.pi * Math.pow(this.r, 2);
+        return Shape.PI * Math.pow(this.r, 2);
     }
 }

@@ -3,8 +3,8 @@ package i_abstract_interface.abstract_class;
 public class Main {
     public static void main(String[] args) {
         Parent child = new Child(20);
-        child.run();
-        System.out.println(child.getX());
+        child.run(); // -> Child is running
+        System.out.println(child.getX()); // -> 20
 
         // Parent parent = new Parent(); // cannot instantiate an abstract since it has undefined (only declared) methods
 
@@ -16,9 +16,6 @@ public class Main {
                 System.out.println("Parent is running");
             }
         };
-
-        parent.run();
-
-
+        parent.run(); // -> Parent is running
     }
 }

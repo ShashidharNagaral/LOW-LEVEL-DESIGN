@@ -7,7 +7,6 @@ public class Child extends Parent{
 
     }
 
-
     @Override
     void run() {
         System.out.println("Child is running");

@@ -1,6 +1,10 @@
 package scratchbook;
 
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 class WrapperMain {
     Main m;
 
@@ -38,6 +42,8 @@ class WrapperMain {
     public static void main(String[] args) {
         Main a = new Main(10);
         Main b = new Main(20);
+
+        LinkedList<Integer> list = new LinkedList<Integer>();
 
         WrapperMain wa = new WrapperMain(a);
         WrapperMain wb = new WrapperMain(b);
