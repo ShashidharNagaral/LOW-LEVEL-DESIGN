@@ -1,6 +1,7 @@
 package i_abstract_interface.interfaces;
 
 public interface Color {
+
     enum COLORS{
         RED,
         ORANGE

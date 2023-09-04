@@ -2,14 +2,18 @@ package d_referencing_single_multilevel_hierarchical_in_inheritance;
 
 public class Main {
     public static void main(String[] args) {
-        Rectangle rect = new Rectangle(10, 20);
+        Rectangle rect = new Rectangle(10, 21);
         Square square = new Square(11);
         square.getDetail();
 
 
-//        Square sq = new Rectangle(10, 11); // Child can not reference to parent object
-        // Since sq is child class reference, and it can have access to parent(non-private) and its own members
-        // but, we are creating instance of parent even before creating a child object which violates
+        // Square sq = new Rectangle(10, 11); // Child can not reference to parent object
+        /*
+        creating a object reference of type child means we have access to child class members along with
+        non-private members of parent
+        but, since we are creating instance of parent which no where call constructor of child
+        how can we access child class instance variables ?? hence child cannot refer to parent object
+        */
 
         Rectangle rect2 = new Square(10);
         // this is allowed bcz when Square object is created it also calls parent class constructor.

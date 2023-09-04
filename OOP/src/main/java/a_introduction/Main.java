@@ -2,8 +2,17 @@ package a_introduction;
 
 import h_access_control.Child;
 
+import java.util.ArrayList;
+
 public class Main {
+
+    static char ch; // default value to char variable is null value
     public static void main(String[] args) {
+
+
+//        char ch; // default values are only assigned to class member variables and not local variable
+        System.out.println(ch);
+
         Student student1 = new Student(10, "shashi", 85.8f);
         // println calls the String.valueOf method where after it calls the toString method of the obj(here in our case student1)
         // since we have overridden the toString method, it will call from Student class and not from Object Class
@@ -40,7 +49,50 @@ public class Main {
         // BUT STILL WE CAN'T SWAP, bcz Integer is an FINAL class
         System.out.println(A+" "+B);
 
+        // null vs '\0'
+        // \0 represents null character (ascii value 0)
+        // null represents absence of value of lack of reference to an object
 
+
+        Integer ref = 100;
+        ref = 10;
+        // You are not directly modifying the value inside the existing Integer object with a value of 100.
+        // Instead, you are creating a new Integer object with the value 10 and then updating the
+        // reference ref to point to the new Integer object. The original Integer object with the value 100
+        // becomes eligible for garbage collection if there are no other references to it.
+
+        int x = 0;
+        System.out.println(timeForPrimitive(x));
+        Integer refc = 0;
+        System.out.println(timeForNonPrimitive(refc));
+
+
+        // String pool
+        String obj = "literal"; // obj will point to "literal" in string pool
+        String obj1 = obj; // obj1 will also point to same "literal" in string pool
+        obj1 = obj1.concat("base"); // now we concatinate "base" to "literal" this will create "base" and "literalbase"
+        // so now overall we have 3 strings in string pool -> "literal", "base" and "literalbase"
+
+        // obj1 will point to new string "literalbase"
+        System.out.println(obj); // NOTE: obj will also point to the literalbase
+    }
+
+    static double timeForPrimitive(int a) {
+        double start = System.currentTimeMillis();
+        for(int i=0; i<1000000; i++) {
+            a++;
+        }
+        double end = System.currentTimeMillis();
+        return end-start;
+    }
+
+    static double timeForNonPrimitive(Integer a) {
+        double start = System.currentTimeMillis();
+        for(int i=0; i<1000000; i++) {
+            a++;
+        }
+        double end = System.currentTimeMillis();
+        return end-start;
     }
 
     static void swap(int a, int b) {

@@ -1,6 +1,15 @@
 package a_introduction;
 
 public class Student {
+
+    /* in java variable name can start with _ (underscore), $(dollar symbol) or by letters
+     a variable can then contain any of the below
+     - letter
+     - digit
+     - $
+     - _ (underscore)
+     */
+
     private int roll;
     private String name;
     private float marks;

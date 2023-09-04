@@ -1,18 +1,15 @@
 package scratchbook;
 
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import a_introduction.Student;
 
-class WrapperMain {
-    Main m;
+import java.lang.ref.SoftReference;
+import java.math.BigInteger;
+import java.util.*;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
-    public WrapperMain(Main m) {
-        this.m = m;
-    }
-}
- public class Main {
+
+public class Main {
 
 
     int x;
@@ -39,7 +36,9 @@ class WrapperMain {
                 '}';
     }
 
-    public static void main(String[] args) {
+
+
+     public static void main(String[] args) {
         Main a = new Main(10);
         Main b = new Main(20);
 
@@ -51,5 +50,5 @@ class WrapperMain {
 
         System.out.println(wa.m);
         System.out.println(wb.m);
-    }
+     }
 }
