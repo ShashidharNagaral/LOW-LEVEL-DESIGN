@@ -1,5 +1,4 @@
 package l_enums;
-
 public enum Color {
     RED(1) {
 
@@ -38,5 +37,9 @@ public enum Color {
 
     // enums can also have abstract methods, but then each instance of enum class must implement this method
     public abstract String greet();
+
+    public static void main(String[] args) {
+
+    }
 
 }

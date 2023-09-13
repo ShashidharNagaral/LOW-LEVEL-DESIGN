@@ -1,12 +1,7 @@
 package scratchbook;
 
 
-import a_introduction.Student;
-
-import java.lang.ref.SoftReference;
-import java.math.BigInteger;
 import java.util.*;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 
 public class Main {
@@ -50,5 +45,15 @@ public class Main {
 
         System.out.println(wa.m);
         System.out.println(wb.m);
+
+
+        MyClass myClass = new MyClass();
+//        MyClass thread2 = new MyClass();
+
+        Thread thread1= new Thread(myClass);
+        Thread thread2= new Thread(myClass);
+        thread1.start();
+        thread2.start();
+
      }
 }

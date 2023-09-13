@@ -16,7 +16,7 @@ public class Product implements Cloneable{
     int arr[] = new int[]{1, 2, 3, 4};
 
     public Product(String name, int price) {
-        this.name = name;
+        this.name = new String(name);
         this.price = price;
     }
 
