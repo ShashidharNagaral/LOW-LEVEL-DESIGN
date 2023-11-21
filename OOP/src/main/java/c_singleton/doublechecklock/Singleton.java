@@ -12,6 +12,7 @@ since it requires the volatile keyword to work properly, it's not compatible wit
  */
 
 
+
 public class Singleton {
     // we are using volatile type for instance so that we fetch the value directly from the primary memory and not from
     // the cache memory

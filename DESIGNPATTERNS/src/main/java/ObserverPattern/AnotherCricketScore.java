@@ -1,12 +1,13 @@
 package ObserverPattern;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
-public class CricketScore implements Subject{
+public class AnotherCricketScore implements Subject{
     Set<OTT> list;
     int run;
 
-    public CricketScore() {
+    public AnotherCricketScore() {
         list = new HashSet<>();
     }
 

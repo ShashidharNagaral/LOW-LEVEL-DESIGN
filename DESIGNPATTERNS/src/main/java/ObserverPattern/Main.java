@@ -1,12 +1,16 @@
 package ObserverPattern;
 
-public class Main {
-    public static void main(String[] args) {
-        CricketScore cricketScore = new CricketScore();
-        Observer observer = new Hotstar(cricketScore, "1");
+import ObserverPattern.Test.HotStar;
 
-        cricketScore.setScore(13, 1, 1.1f);
-        Observer observer2 = new Sony(cricketScore, "2");
-        cricketScore.setScore(20, 2, 1.5f);
+public class Main {
+
+    public static void main(String[] args) {
+        Subject cs = new CricketScore();
+        Subject acs = new AnotherCricketScore();
+        OTT s = new SonyOTT(cs);
+        OTT h = new HotStar(acs);
+        ((CricketScore) cs).setScore(10);
+        ((AnotherCricketScore) acs).setScore(20);
     }
+
 }

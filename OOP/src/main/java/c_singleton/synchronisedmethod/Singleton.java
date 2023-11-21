@@ -3,7 +3,7 @@ package c_singleton.synchronisedmethod;
 
 /*
 SYNCHRONISED METHOD:
-A simple way to create a thread-safe singleton class is to make the global access method synchronized so that
+A simple way to create a thread-safe singleton class is to make the global access method synchronised so that
 only one thread can execute this method at a time.
 
 The preceding implementation works fine and provides thread-safety, but it reduces the performance because of the cost

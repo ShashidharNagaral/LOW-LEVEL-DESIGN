@@ -5,7 +5,7 @@ Static block initialization implementation is similar to eager initialization, e
 is created in the static block that provides the option for exception handling.
 
 Both eager initialization and static block initialization create the instance even before it’s being used and
-that is not the best practice to use.
+this is not a good practice.
  */
 public class Singleton {
 
