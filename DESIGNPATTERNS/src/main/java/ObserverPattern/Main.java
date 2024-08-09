@@ -1,6 +1,5 @@
 package ObserverPattern;
 
-import ObserverPattern.Test.HotStar;
 
 public class Main {
 

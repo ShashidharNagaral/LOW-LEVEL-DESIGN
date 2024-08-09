@@ -20,5 +20,16 @@ public class Student implements Iterator {
         return this.x == o.x;
     }
 
-    
+	@Override
+	public boolean hasNext() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object next() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

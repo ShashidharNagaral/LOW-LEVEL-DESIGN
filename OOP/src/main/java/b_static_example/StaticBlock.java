@@ -4,8 +4,9 @@ public class StaticBlock {
     static int a = 10;
     static int b;
 
-    // static block is a block provided by java compiler which get called "before" main method.
-    // also its get called only once first time when the class is loaded in the memory.
+    /* NOTE: Static block is a block provided by java compiler which get called "before" main method.
+     also its get called only once first time when the class is loaded in the memory. */
+
     static {
         b = a*10;
         System.out.println("this is static block");
@@ -16,7 +17,9 @@ public class StaticBlock {
         StaticBlock block1 = new StaticBlock();
         System.out.println("a: "+StaticBlock.a +"\nb: "+StaticBlock.b);
         StaticBlock.b += 5;
-        StaticBlock block2 = new StaticBlock(); // even though we created another instance the static block did not get called second time
+
+        // -> even though we create another instance the static block did not get called second time
+        StaticBlock block2 = new StaticBlock();
         System.out.println("a: "+StaticBlock.a +"\nb: "+StaticBlock.b);
     }
 }

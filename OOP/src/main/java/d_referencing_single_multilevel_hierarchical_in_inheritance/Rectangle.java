@@ -15,12 +15,11 @@ public class Rectangle {
     // default constructor -> calls primary constructor with default values
     public Rectangle() {
         System.out.println("Rectangle default constructor!");
-        new Rectangle(0, 0);
+        new Rectangle( 0, 0);
     }
 
     public void getDetail() {
         System.out.println("Rectangle: getDetail()");
         System.out.println("length: "+this.length+"breadth: "+this.breadth);
     }
-
 }

@@ -1,5 +1,4 @@
-package ObserverPattern.Test;
-
+package ObserverPattern;
 
 import ObserverPattern.OTT;
 import ObserverPattern.Subject;

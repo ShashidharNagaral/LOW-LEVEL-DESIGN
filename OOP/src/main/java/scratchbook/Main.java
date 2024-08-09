@@ -13,7 +13,5 @@ public class Main {
         PageVisitCounter pageVisitCounter1 = PageVisitCounter.getInstance();
         pageVisitCounter1.onPageVisit("home");
         System.out.println(pageVisitCounter.getPageVisits("home"));
-
-
     }
 }

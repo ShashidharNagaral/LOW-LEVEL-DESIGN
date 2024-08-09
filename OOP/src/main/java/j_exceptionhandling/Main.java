@@ -29,36 +29,36 @@ public class Main {
     */
 
     public static void main(String[] args) {
-//        int a = 10;
-//        int b = 0;
-//        // System.out.println(divide(a, b)); // throws Arithmetic Exception
-//        // to handle this we have to put the code inside try-catch block
-//
-//        try {
-////            System.out.println(divide(a, b));
-////            System.out.println(divide2(a, b));
+        int a = 10;
+        int b = 0;
+        // System.out.println(divide(a, b)); // throws Arithmetic Exception
+        // to handle this we have to put the code inside try-catch block
+
+        try {
+//            System.out.println(divide(a, b));
+            System.out.println(divide2(a, b));
 //            if(a == 10) {
 //                throw new CustomException("this is custom exception created");
 //            }
-//        } catch (CustomException e) {
-//            System.out.println("custom made exception");
-//        }
-//        catch (ArithmeticException e) {
-//            System.out.println("arithmetic exception"); // this will specifically handle arithmetic exceptions
-//        } catch(Exception e) {
-//            System.out.println(e.getMessage()); // this will handle exceptions in general other than above exceptions
-//        } finally {
-//            System.out.println("Finally will be always executed");
-//        }
+        } catch (CustomException e) {
+            System.out.println("custom made exception");
+        }
+        catch (ArithmeticException e) {
+            System.out.println("arithmetic exception"); // this will specifically handle arithmetic exceptions
+        } catch(Exception e) {
+            System.out.println(e.getMessage()); // this will handle exceptions in general other than above exceptions
+        } finally {
+            System.out.println("Finally will be always executed");
+        }
     }
 
     static int divide(int a, int b) {
-        return a/b;
+        return a/b; // if b == 0, it throws arithmetic exception
     }
 
-    static int divide2(int a, int b) throws ArithmeticException{
+    static int divide2(int a, int b) throws CustomException{
         if(b == 0) {
-            throw new ArithmeticException("divide by zero exception");
+            throw new CustomException("divide by zero exception");
         }
         return a/b;
     }

@@ -9,7 +9,7 @@ public class Mocha extends BeverageDecorator{
     @Override
     public double cost() {
         if(beverage instanceof Espresso) {
-            System.out.println("it is");
+            return super.cost() + 1;
         }
         return super.cost() + 2;
     }

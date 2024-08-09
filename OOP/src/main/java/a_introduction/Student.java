@@ -2,13 +2,14 @@ package a_introduction;
 
 public class Student {
 
-    /* in java variable name can start with _ (underscore), $(dollar symbol) or by letters
-     a variable can then contain any of the below
-     - letter
-     - digit
-     - $
-     - _ (underscore)
-     */
+    /*
+    NOTE: In java variable name can start with _ (underscore), $(dollar symbol) or by letters,
+    a variable can then contain any of the below
+    - letter
+    - digit
+    - $
+    - _ (underscore)
+    */
 
     private int roll;
     private String name;
@@ -20,9 +21,10 @@ public class Student {
         this.name = name;
         this.marks = marks;
     }
+
     // default constructor
     public Student() {
-        new Student(0, "admin", 0.0f);
+        // this(-1, "anonymous", 0.0F); // this will call primary constructor
     }
 
     // copy constructor
@@ -32,13 +34,13 @@ public class Student {
         this.marks = newObject.marks;
     }
 
-//    @Override
-//    public String toString() {
-//        return this.name+" "+this.roll+" "+ this.marks;
-//    }
+    @Override
+    public String toString() {
+        return this.name+" "+this.roll+" "+ this.marks;
+    }
 
     public String getDetail() {
-        return "shashid";
+        return "name: " + this.name + "rollno.: "+ this.roll + "marks: "+ this.marks;
     }
 
     public void updateMarks(float marks) {

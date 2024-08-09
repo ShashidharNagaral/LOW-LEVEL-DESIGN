@@ -39,7 +39,7 @@ public class Main {
         circle2.area(); // this will call area method of circle class not because it was having method defined, but it was overriding method
         // from  parent class (Shape).
 
-//        circle2.perimeter();  //  this won't work as above example
+        //  circle2.perimeter();  //  this won't work as above example
         // since the reference type of circle2 is Shape, the method is
         System.out.println(square);
 

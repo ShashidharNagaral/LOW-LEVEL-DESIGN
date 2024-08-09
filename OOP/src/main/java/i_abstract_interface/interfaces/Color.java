@@ -7,8 +7,8 @@ public interface Color {
         ORANGE
     };
 
-    public void paint(COLORS color);
-    public default void greet() {
+    void paint(COLORS color);
+    default void greet() {
         System.out.println("this is color interface");
     }
 }

@@ -2,11 +2,12 @@ package h_access_control;
 
 public class Parent {
     int num; // by default the access control is package private
-//    default int num;
-    /*
+    // default int num;
+
+    /* NOTE:
     package private:
     -> data accessible inside same package including subclass in same package
-    -> use default modifier when we don't want to let the data be package used outside the
+    -> use default modifier when we don't want to let the data be used outside the package
      */
 
     private int arr[];

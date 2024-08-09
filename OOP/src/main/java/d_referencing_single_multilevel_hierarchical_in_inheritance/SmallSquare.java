@@ -4,6 +4,7 @@ public class SmallSquare extends Square{
     String name = "Small square";
     SmallSquare() {
         super();
+        System.out.println("Default SmallSquare Constructor!");
     }
 
     @Override

@@ -2,7 +2,9 @@ package f_polymorphism;
 
 public class Circle extends Shape {
 
+    @Override
     void area() {
+        System.out.println("area method is override in Circle class");
         System.out.println("Area is pi * radius ^ 2");
     }
 
@@ -22,10 +24,9 @@ public class Circle extends Shape {
         return a + b;
     }
 
-//    double sum(int a, int b) {
+//    double sum (int a, int b) {
 //        return Double.valueOf(a+b);
 //    } // this won't be allowed since there's already a method sum with int, int as parameter types
-
 
     @Override
     public String toString() {

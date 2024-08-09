@@ -1,10 +1,13 @@
 package d_referencing_single_multilevel_hierarchical_in_inheritance;
 
 public class Square extends Rectangle {
-    String name = "Square";
-    int side;
 
-    // by default every child constructor calls default super() method i.e default constructor of its next parent class
+    int side;
+    String name = "Square";
+
+    // int length; // -> this will not override the parent class variables
+
+    // by default every child constructor calls default super() method i.e. default constructor of its next parent class
 
     // super call will be always first since the child class need the parent class to get instantiated first
     public Square(int side) {
@@ -18,10 +21,9 @@ public class Square extends Rectangle {
         System.out.println("Square default constructor!");
     }
 
-
     @Override
     public void getDetail() {
         System.out.println("Square: getDetail()");
-        System.out.println("Side: "+ super.length);
+        System.out.println("Side: "+ this.length);
     }
 }

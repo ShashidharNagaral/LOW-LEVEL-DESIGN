@@ -43,7 +43,6 @@ public class ObjectDemo {
         String d = new String("shashi");
         System.out.println(c == d); // this will give false since c and d are referencing to different objects
 
-
         // to compare only values of it we should use equal method
         System.out.println(c.equals(d)); // this will give true
     }
