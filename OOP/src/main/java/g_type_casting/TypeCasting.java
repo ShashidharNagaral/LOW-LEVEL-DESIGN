@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class TypeCasting {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-//        int num = input.nextFloat(); //   this won't work bcz float is of large size than int
-//        int num = input.next(); //    this won't work bcz string are not compatible to int, float
+//        int num = input.nextFloat(); // this won't work bcz float is of large sizer than int
+//        int num = input.next(); // this won't work bcz string are not compatible to int, float
 
         float num = input.nextInt(); // this work's fine, but it just accepts int value and for float it will error
         // try input 1.0, it will through InputMismatchException
@@ -42,5 +42,6 @@ public class TypeCasting {
         // NOTE: rules while promoting
         // 1. Java automatically promotes each byte, short, or char operand to int when evaluating an expression
         // 2. If one operand is long, float or double the whole expression is promoted to long, float or double resp.
+
     }
 }

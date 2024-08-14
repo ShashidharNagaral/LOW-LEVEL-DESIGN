@@ -7,7 +7,6 @@ JAVA BEAN:
 They should ALWAYS implement Serializable interface.
 They MUST have a public no-arg constructor.
 The properties within them should ALWAYS be PRIVATE with public getters and setter methods.
-
  */
 
 
@@ -37,7 +36,7 @@ public class StorageBean implements Serializable {
         try {
             ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(path+"storage.ser"));
             outputStream.writeObject(storage);
-            outputStream.writeObject(studentPOJO); // this throws not serializable exception
+//            outputStream.writeObject(studentPOJO); // this throws not serializable exception
             System.out.println("Storage object serialised and saved in file");
         } catch (IOException e) {
             throw new RuntimeException(e);

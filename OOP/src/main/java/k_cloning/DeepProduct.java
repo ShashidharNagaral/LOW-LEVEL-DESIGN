@@ -1,9 +1,9 @@
 package k_cloning;
 
 public class DeepProduct implements Cloneable{
-    String name;
-    int price;
-    int arr[] = new int[]{1, 2, 3, 4};
+    String name; // non-primitive
+    int price; // primitive
+    int arr[] = new int[]{1, 2, 3, 4}; // non-primitive
 
     public DeepProduct(String name, int price) {
         this.name = name;
@@ -15,6 +15,7 @@ public class DeepProduct implements Cloneable{
 //        this.name = other.name;
 //        this.price = other.price;
 //    }
+
     @Override
     protected Object clone() throws CloneNotSupportedException {
         // below is deep copy steps

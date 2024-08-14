@@ -4,16 +4,16 @@ import java.util.Arrays;
 
 public class ShallowCopy {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Product pen = new Product("pen", 10);
-        Product book = (Product) pen.clone();
+        ShallowProduct pen = new ShallowProduct("pen", 10);
+        ShallowProduct book = (ShallowProduct) pen.clone();
 
-        System.out.println(pen.name);
-        System.out.println(book.name);
+        System.out.println(pen.name); // -> pen
+        System.out.println(book.name); // -> pen
 
         // changing the name of pen object
         book.name = "book";
 
-        // name attribute changed in book object and it has not reflected in pen object
+        // name attribute changed in book object, but it has not reflected in pen object
         System.out.println(pen.name);
         System.out.println(book.name);
 

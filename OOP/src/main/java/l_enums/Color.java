@@ -1,7 +1,6 @@
 package l_enums;
 public enum Color {
-    RED(1) {
-
+    RED(4) {
         // abstract methods are overridden and defined
         @Override
         public String greet() {
@@ -16,6 +15,11 @@ public enum Color {
         @Override
         public String greet() {
             return "I'm am of sky color";
+        }
+
+        @Override
+        public int getValue() {
+            return super.getValue();
         }
     };
 
@@ -37,9 +41,4 @@ public enum Color {
 
     // enums can also have abstract methods, but then each instance of enum class must implement this method
     public abstract String greet();
-
-    public static void main(String[] args) {
-
-    }
-
 }
