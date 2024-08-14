@@ -1,7 +1,7 @@
-package i_abstract_interface.interfaces;
+package i_abstract_interface.interfaces.impl;
 
-import i_abstract_interface.interfaces.impl.Shape;
-import i_abstract_interface.interfaces.impl.SolidShape;
+import i_abstract_interface.interfaces.Shape;
+import i_abstract_interface.interfaces.SolidShape;
 
 public class Sphere implements SolidShape {
     int r;

@@ -1,4 +1,4 @@
-package i_abstract_interface.interfaces.impl;
+package i_abstract_interface.interfaces;
 
 public interface Shape {
     // static void fun(); // static interface method should always have a body

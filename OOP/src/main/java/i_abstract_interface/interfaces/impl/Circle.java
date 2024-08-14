@@ -1,8 +1,9 @@
-package i_abstract_interface.interfaces;
+package i_abstract_interface.interfaces.impl;
 
-import i_abstract_interface.interfaces.impl.Shape;
+import i_abstract_interface.interfaces.Color;
+import i_abstract_interface.interfaces.Shape;
 
-public class Circle implements Shape, Color{
+public class Circle implements Shape, Color {
     private int r;
     public Circle(int r) {
         this.r = r;

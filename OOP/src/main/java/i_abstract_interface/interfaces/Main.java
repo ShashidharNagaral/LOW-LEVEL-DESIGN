@@ -1,11 +1,12 @@
 package i_abstract_interface.interfaces;
 
-import i_abstract_interface.interfaces.impl.SolidShape;
+import i_abstract_interface.interfaces.impl.Circle;
+import i_abstract_interface.interfaces.impl.Sphere;
 
 /*
     NOTE: what does interface actually brings to OOP?
-
-    Interfaces provide several key benefits in OOP:
+    - Using INTERFACE, we can define WHAT class must do, but not HOW it will do.
+    - Interfaces provide several key benefits in OOP:
     1. Abstraction: Define contracts for classes to implement without dictating how.
     2. Polymorphism: Allow different implementations to be treated uniformly.
     3. Multiple Inheritance: Enable a class to implement multiple interfaces.
