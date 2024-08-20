@@ -19,12 +19,16 @@ package SingleResponsibilityPrinciple.WITH_SO;
 */
 
 import SingleResponsibilityPrinciple.WITH_SO.impl.DefaultCalculator;
+import SingleResponsibilityPrinciple.WITH_SO.impl.DefaultPrinter;
 import SingleResponsibilityPrinciple.WITH_SO.impl.DiscountCalculator;
+import SingleResponsibilityPrinciple.WITH_SO.impl.DiscountPrinter;
 
 public class Main {
     public static void main(String[] args) {
         BillCalculator defaultCalculator = new DefaultCalculator();
-        Bill bill = new Bill("Shashidhar", defaultCalculator);
+        PrinterStrategy defaultPrinter = new DefaultPrinter();
+
+        Bill bill = new Bill("Shashidhar", defaultCalculator, defaultPrinter);
 
         Item book = new Item("book", 50);
         Item pen = new Item("pen", 10);
@@ -32,24 +36,26 @@ public class Main {
         bill.addItem(book);
         bill.addItem(pen);
 
-        Printer billPrinter = new Printer();
-        billPrinter.printBill(bill);
+        defaultPrinter.printBill(bill);
 
         BillManager billManager = new BillManager(bill);
         Transaction transaction = new Transaction(bill);
+
         transaction.payBill();
+
         billManager.saveToDB();
         billManager.shareBill();
 
-        BillCalculator discountCalculator = new DiscountCalculator(5);
-        Bill discount_bill = new Bill("Shashidhar_discount", discountCalculator);
-
+        BillCalculator discountCalculator = new DiscountCalculator();
+        PrinterStrategy discountPrinter =  new DiscountPrinter();
+        Bill discount_bill = new Bill("Shashidhar_discount", discountCalculator, discountPrinter);
+        discount_bill.setDiscount(5);
         Item paints = new Item("paints", 100);
         Item bag = new Item("bag", 500);
 
         discount_bill.addItem(paints);
         discount_bill.addItem(bag);
 
-        billPrinter.printBill(discount_bill);
+        discountPrinter.printBill(discount_bill);
     }
 }

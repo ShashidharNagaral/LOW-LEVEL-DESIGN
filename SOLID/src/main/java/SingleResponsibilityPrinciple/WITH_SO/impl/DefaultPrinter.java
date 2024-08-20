@@ -1,8 +1,12 @@
-package SingleResponsibilityPrinciple.WITH_SO;
+package SingleResponsibilityPrinciple.WITH_SO.impl;
+
+import SingleResponsibilityPrinciple.WITH_SO.Bill;
+import SingleResponsibilityPrinciple.WITH_SO.Item;
+import SingleResponsibilityPrinciple.WITH_SO.PrinterStrategy;
 
 // NOTE: Printer class is only responsible for handling the displaying logic
-public class Printer {
-
+public class DefaultPrinter implements PrinterStrategy {
+    @Override
     public void printBill(Bill bill) {
         System.out.println("---------");
         System.out.println("Customer Name: "+ bill.getCustomerName());
