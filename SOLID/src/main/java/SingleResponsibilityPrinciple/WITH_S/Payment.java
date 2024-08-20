@@ -1,15 +1,15 @@
 package SingleResponsibilityPrinciple.WITH_S;
 
 /*
-    NOTE: Transaction Class is responsible to handle payment
+    NOTE: Payment Class is responsible to handle payment
     (Further we can me it more generalise to make it adapt different paying interfaces)
  */
 
-public class Transaction {
+public class Payment {
 
     Bill bill;
 
-    public Transaction(Bill bill) {
+    public Payment(Bill bill) {
         this.bill = bill;
     }
 

@@ -18,15 +18,13 @@ package SingleResponsibilityPrinciple.WITH_SO;
     - Moreover if we dont use interface/abstract it can affect scalability as we increase stratergies.
 */
 
-import SingleResponsibilityPrinciple.WITH_SO.impl.DefaultCalculator;
-import SingleResponsibilityPrinciple.WITH_SO.impl.DefaultPrinter;
-import SingleResponsibilityPrinciple.WITH_SO.impl.DiscountCalculator;
-import SingleResponsibilityPrinciple.WITH_SO.impl.DiscountPrinter;
+import SingleResponsibilityPrinciple.WITH_SO.impl.*;
 
 public class Main {
     public static void main(String[] args) {
-        BillCalculator defaultCalculator = new DefaultCalculator();
+        BillCalculateStrategy defaultCalculator = new DefaultCalculator();
         PrinterStrategy defaultPrinter = new DefaultPrinter();
+        EmailShare emailShare = new EmailShare();
 
         Bill bill = new Bill("Shashidhar", defaultCalculator, defaultPrinter);
 
@@ -36,25 +34,39 @@ public class Main {
         bill.addItem(book);
         bill.addItem(pen);
 
-        defaultPrinter.printBill(bill);
+        Storage dbStorage = new DBStorage();
 
-        BillManager billManager = new BillManager(bill);
+        BillManager billManager = new BillManager(bill, dbStorage, emailShare);
         Transaction transaction = new Transaction(bill);
 
         transaction.payBill();
 
-        billManager.saveToDB();
-        billManager.shareBill();
+        billManager.save(); // db storage
+        billManager.share(); // email sharing
 
-        BillCalculator discountCalculator = new DiscountCalculator();
+        defaultPrinter.printBill(bill);
+
+        BillCalculateStrategy discountCalculator = new DiscountCalculator();
         PrinterStrategy discountPrinter =  new DiscountPrinter();
+        ShareStrategy bluetoothShare = new BluetoothShare();
+
         Bill discount_bill = new Bill("Shashidhar_discount", discountCalculator, discountPrinter);
         discount_bill.setDiscount(5);
+
+        Storage fileStorage = new FileStorage();
+        BillManager billManager1 = new BillManager(bill, fileStorage, bluetoothShare);
+        Transaction transaction1 = new Transaction(discount_bill);
+
         Item paints = new Item("paints", 100);
         Item bag = new Item("bag", 500);
 
         discount_bill.addItem(paints);
         discount_bill.addItem(bag);
+
+        transaction1.payBill();
+
+        billManager1.save(); // file storage
+        billManager1.share(); // bluetooth sharing
 
         discountPrinter.printBill(discount_bill);
     }

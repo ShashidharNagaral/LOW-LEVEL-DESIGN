@@ -1,20 +1,28 @@
 package SingleResponsibilityPrinciple.WITH_SO;
 
-/* NOTE: BillManager Class handles saving the bills into the database, and also sharing the bill through some api services.
+/* NOTE:
+    - BillManager has savetoDB, we can also add new feature called save to Files.
+    - This will lead to creating a new strategy in BillManager called Storage
  */
 public class BillManager {
 
     private Bill bill;
+    private Storage storage;
 
-    public BillManager(Bill bill) {
+    private ShareStrategy shareStrategy;
+
+    public BillManager(Bill bill, Storage storage, ShareStrategy shareStrategy) {
         this.bill = bill;
+        this.storage = storage;
+        this.shareStrategy = shareStrategy;
     }
 
-    public void saveToDB() {
-        System.out.println("save bill to some database");
+    public void save() {
+        this.storage.save();
     }
 
-    public void shareBill() {
-        System.out.println("share bill using email");
+    public void share() {
+        this.shareStrategy.share();
     }
+
 }

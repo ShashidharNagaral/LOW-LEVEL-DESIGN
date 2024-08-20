@@ -2,11 +2,13 @@ package SingleResponsibilityPrinciple.WITH_S;
 
 import java.util.ArrayList;
 
-/*  NOTE: Bill class has
+/*
+    NOTE: Bill class has
     - items
     - customerName
     - addItem and removeItem methods for managing the items in the itemList.
  */
+
 public class Bill {
     private ArrayList<Item> items;
     private String customerName;

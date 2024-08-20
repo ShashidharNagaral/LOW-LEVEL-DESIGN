@@ -1,7 +1,7 @@
 package SingleResponsibilityPrinciple.WITH_SO;
 
 /*
-    NOTE: Transaction Class is responsible to handle payment
+    NOTE: Payment Class is responsible to handle payment
     (Further we can me it more generalise to make it adapt different paying interfaces)
  */
 

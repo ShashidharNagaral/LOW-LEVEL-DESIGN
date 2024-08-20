@@ -7,10 +7,11 @@ import java.util.ArrayList;
     - customerName
     - addItem and removeItem methods for managing the items in the itemList.
  */
+
 public class Bill {
     private ArrayList<Item> items;
     private String customerName;
-    private BillCalculator billCalculator;
+    private BillCalculateStrategy billCalculator;
     private float discount;
     private PrinterStrategy printerStrategy;
 
@@ -33,7 +34,7 @@ public class Bill {
         return customerName;
     }
 
-    public Bill(String customerName, BillCalculator billCalculator, PrinterStrategy printerStrategy) {
+    public Bill(String customerName, BillCalculateStrategy billCalculator, PrinterStrategy printerStrategy) {
         this.items = new ArrayList<>();
         this.customerName = customerName;
         this.billCalculator = billCalculator;

@@ -22,7 +22,7 @@ public class Main {
         billPrinter.printBill();
 
         BillManager billManager = new BillManager(bill);
-        Transaction transaction = new Transaction(bill);
+        Payment transaction = new Payment(bill);
 
         transaction.payBill();
 

@@ -1,7 +1,5 @@
 package SingleResponsibilityPrinciple.WITH_SO;
 
-import java.util.ArrayList;
-
-public interface BillCalculator {
+public interface BillCalculateStrategy {
     float calculateBill(Bill bill);
 }
