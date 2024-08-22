@@ -4,7 +4,6 @@ import StrategyPattern.KickImpl.FrontKick;
 import StrategyPattern.KickImpl.JumpingKick;
 import StrategyPattern.PunchImpl.ReversePunch;
 
-
 public class Main {
     public static void main(String[] args) {
         // Scorpion is a type of mortal kombat character who has default technique as Front Kick and Straight Punch
