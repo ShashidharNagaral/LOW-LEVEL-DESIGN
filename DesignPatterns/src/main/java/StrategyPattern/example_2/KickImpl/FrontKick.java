@@ -1,6 +1,6 @@
-package StrategyPattern.KickImpl;
+package StrategyPattern.example_2.KickImpl;
 
-import StrategyPattern.Kick;
+import StrategyPattern.example_2.Kick;
 
 public class FrontKick implements Kick {
     @Override

@@ -1,8 +1,8 @@
 package ObserverPattern;
 
-public class SonyOTT implements OTT{
+public class Sony implements OTT{
     Subject cricketScore;
-    public SonyOTT(Subject cricketScore) {
+    public Sony(Subject cricketScore) {
         this.cricketScore = cricketScore;
         cricketScore.register(this);
     }

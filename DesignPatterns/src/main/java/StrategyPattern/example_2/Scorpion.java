@@ -1,8 +1,7 @@
-package StrategyPattern;
+package StrategyPattern.example_2;
 
-import StrategyPattern.KickImpl.FrontKick;
-import StrategyPattern.PunchImpl.ReversePunch;
-import StrategyPattern.PunchImpl.StraightPunch;
+import StrategyPattern.example_2.KickImpl.FrontKick;
+import StrategyPattern.example_2.PunchImpl.StraightPunch;
 
 public class Scorpion extends Fighter{
 

@@ -1,5 +1,4 @@
-package StrategyPattern;
-
+package StrategyPattern.example_2;
 
 // this is a context on which different algorithms (behaviours) are performed
 public abstract class Fighter {

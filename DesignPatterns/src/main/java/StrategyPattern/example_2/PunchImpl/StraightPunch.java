@@ -1,6 +1,6 @@
-package StrategyPattern.PunchImpl;
+package StrategyPattern.example_2.PunchImpl;
 
-import StrategyPattern.Punch;
+import StrategyPattern.example_2.Punch;
 
 public class StraightPunch implements Punch {
     @Override
