@@ -6,7 +6,7 @@ flexible, and maintainable.
     - should have only one *reason* to change.
     - should have only one *responsibility*.
     
-   ![SRP](images/SRP.png)
+   ![SRP](../images/SRP.png)
 
 
 2. **Open / Closed Principle** tells that a class should be *open for extension* but *closed for modification*.
@@ -26,7 +26,7 @@ flexible, and maintainable.
    - But, we should rely on composition over inheritance since this can make the code losely coupled, think why and how?
    - Moreover if we dont use interface/abstract class it can affect scalability as we increase stratergies.
 
-   ![OCP](images/OCP.png)
+   ![OCP](../images/OCP.png)
 
 
       NOTE: Understanding the Shift from SRP to OCP
@@ -40,7 +40,7 @@ flexible, and maintainable.
    
    If class B is a subtype of class A, we should be able to replace A with B without disrupting the behavior of our program.
 
-   ![LSP](images/LSP.png)
+   ![LSP](../images/LSP.png)
       
          NOTE: After we apply Open / Closed Princple, we end up with using inheritance, or composition through delegation.
          This made the sub-class vulnerable.
@@ -111,7 +111,7 @@ flexible, and maintainable.
 
    Clients should not be forced to depend on methods that they do not use.
 
-   ![ISP](images/ISP.png)
+   ![ISP](../images/ISP.png)
 
    **Code Explanation**
 
@@ -131,4 +131,4 @@ flexible, and maintainable.
 
    **Code Explanation**
 
-   ![DIP](images/DIP.png)
+   ![DIP](../images/DIP.png)
