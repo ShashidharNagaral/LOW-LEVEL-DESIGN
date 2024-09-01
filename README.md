@@ -12,4 +12,5 @@
      - https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898
    - **Design Patterns**
      - https://refactoring.guru/design-patterns
+     - https://sourcemaking.com/design_patterns
      - https://www.youtube.com/playlist?list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc
