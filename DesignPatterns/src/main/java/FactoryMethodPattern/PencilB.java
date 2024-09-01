@@ -1,4 +1,4 @@
-package FactoryPattern;
+package FactoryMethodPattern;
 
 public class PencilB implements Product{
     @Override

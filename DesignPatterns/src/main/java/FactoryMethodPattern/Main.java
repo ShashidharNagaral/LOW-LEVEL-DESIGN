@@ -1,8 +1,4 @@
-package FactoryPattern;
-
-import FactoryPattern.FactoryA;
-import FactoryPattern.FactoryB;
-import FactoryPattern.ProductFactory;
+package FactoryMethodPattern;
 
 public class Main {
     public static void main(String[] args) {
