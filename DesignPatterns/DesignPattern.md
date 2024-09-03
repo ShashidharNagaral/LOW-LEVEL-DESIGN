@@ -87,7 +87,7 @@ instantiation to subclasses.*
 
     NOTE:
 
-    - instantiation is an activity that shouldn’t always be done in public and can often lead to coupling problems
+    - Instantiation is an activity that shouldn’t always be done in public and can often lead to coupling problems
     - This pattern is super handy when the exact type of object isn’t known until runtime, or when you want to keep your code flexible and easy to extend.
 <hr>
 
@@ -105,9 +105,29 @@ without specifying their concrete classes.*
 
     NOTE:
 
-    -  In an Abstract Factory pattern, the methods that create products are often implemented as factory methods. This 
+    - In an Abstract Factory pattern, the methods that create products are often implemented as factory methods. This 
     approach aligns with the Abstract Factory's purpose, which is to define an interface for creating families of related
     products. Each method in the Abstract Factory is responsible for creating a specific product, and subclasses of the 
     Abstract Factory use factory methods to provide the concrete implementations of these products. This combination allows
     for flexible and scalable creation of related objects without specifying their concrete classes.
+<hr>
+
+## Singleton Pattern
+*The Singleton Pattern ensures a class has only one
+instance, and provides a global point of access to it.*
+
+### Intent
+- Ensure a class has only one instance, and provide a global point of access to it.
+- Encapsulated "just-in-time initialization" or "initialization on first use".
+
+![SingletonPattern](../images/singletonpattern.png)
+
+    NOTE:
+    - Lazy Initialisation
+    - Synchronised Method
+    - Eager Initialisation
+    - Static Block Initialisation
+    - Double Check Lock
+    - Bill Pughs Method
+    - Enum
 <hr>

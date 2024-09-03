@@ -1,6 +1,6 @@
 package a_introduction;
 
-import h_access_control.Child;
+import g_access_control.Child;
 
 public class Main {
 
@@ -88,7 +88,7 @@ public class Main {
         // obj1 will point to new string "literalbase"
         System.out.println(obj); // NOTE: obj will also point to the literalbase
 
-        // below is from access control topic please refer package h_access_control
+        // below is from access control topic please refer package g_access_control
         Child child = new Child(19, "newName");
         child.getNum(); // public member accessible anywhere
         // child.name; protected member not accessible in non child class
